@@ -124,8 +124,8 @@ body {
   width: 100%;
   height: 36px;
   background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
-  -webkit-mask-image: url('/logo.svg');
-  mask-image: url('/logo.svg');
+  -webkit-mask-image: var(--logo-mask);
+  mask-image: var(--logo-mask);
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;

@@ -78,15 +78,17 @@ const PAGE_LABELS = NAV_ITEMS.reduce<Record<string, string>>((labels, item) => {
   return labels;
 }, {});
 
+const getAssetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 const ACHIEVEMENT_PLATES = [
-  { id: '50k', src: '/plates/placa-50k.png', alt: 'Placa conquistada 50K' },
-  { id: '100k', src: '/plates/placa-100k.png', alt: 'Placa conquistada 100K' },
-  { id: '200k', src: '/plates/placa-200k.png', alt: 'Placa conquistada 200K' },
-  { id: '1m', src: '/plates/placa-1m.png', alt: 'Placa conquistada 1M' },
+  { id: '50k', src: getAssetPath('/plates/placa-50k.png'), alt: 'Placa conquistada 50K' },
+  { id: '100k', src: getAssetPath('/plates/placa-100k.png'), alt: 'Placa conquistada 100K' },
+  { id: '200k', src: getAssetPath('/plates/placa-200k.png'), alt: 'Placa conquistada 200K' },
+  { id: '1m', src: getAssetPath('/plates/placa-1m.png'), alt: 'Placa conquistada 1M' },
 ];
 
 function App() {
-  const [activePage, setActivePage] = useState('metrics_add');
+  const [activePage, setActivePage] = useState('home');
   const [intelCategory, setIntelCategory] = useState<string | null>(null);
   const [intelSearch, setIntelSearch] = useState('');
   const [selectedPlate, setSelectedPlate] = useState<(typeof ACHIEVEMENT_PLATES)[number] | null>(null);
@@ -239,7 +241,10 @@ function App() {
           transition={{ type: 'spring', stiffness: 100, damping: 20 }}
         >
           <div className="brand">
-            <div className="logo-img"></div>
+            <div
+              className="logo-img"
+              style={{ '--logo-mask': `url("${getAssetPath('/logo.svg')}")` } as React.CSSProperties}
+            ></div>
           </div>
           
           <nav className="sidebar-nav">
