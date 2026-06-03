@@ -102,28 +102,28 @@ function App() {
     if (!ctx) return;
 
     const conversionLine = ctx.createLinearGradient(0, 0, 800, 0);
-    conversionLine.addColorStop(0, '#58DDE8');
-    conversionLine.addColorStop(1, '#33B5C3');
+    conversionLine.addColorStop(0, '#BDCCEB');
+    conversionLine.addColorStop(1, '#8EA4D0');
 
     const roiLine = ctx.createLinearGradient(0, 0, 800, 0);
-    roiLine.addColorStop(0, '#00A3B4');
-    roiLine.addColorStop(1, '#008E9E');
+    roiLine.addColorStop(0, '#3F73DD');
+    roiLine.addColorStop(1, '#2C65DA');
 
     const cacLine = ctx.createLinearGradient(0, 0, 800, 0);
-    cacLine.addColorStop(0, '#00727E');
-    cacLine.addColorStop(1, '#005964');
+    cacLine.addColorStop(0, '#2357C3');
+    cacLine.addColorStop(1, '#1F4EAD');
 
     const conversionArea = ctx.createLinearGradient(0, 0, 0, 360);
-    conversionArea.addColorStop(0, 'rgba(88, 221, 232, 0.26)');
-    conversionArea.addColorStop(1, 'rgba(88, 221, 232, 0)');
+    conversionArea.addColorStop(0, 'rgba(189, 204, 235, 0.26)');
+    conversionArea.addColorStop(1, 'rgba(189, 204, 235, 0)');
 
     const roiArea = ctx.createLinearGradient(0, 0, 0, 360);
-    roiArea.addColorStop(0, 'rgba(0, 163, 180, 0.2)');
-    roiArea.addColorStop(1, 'rgba(0, 163, 180, 0)');
+    roiArea.addColorStop(0, 'rgba(63, 115, 221, 0.2)');
+    roiArea.addColorStop(1, 'rgba(63, 115, 221, 0)');
 
     const cacArea = ctx.createLinearGradient(0, 0, 0, 360);
-    cacArea.addColorStop(0, 'rgba(0, 114, 126, 0.18)');
-    cacArea.addColorStop(1, 'rgba(0, 114, 126, 0)');
+    cacArea.addColorStop(0, 'rgba(35, 87, 195, 0.18)');
+    cacArea.addColorStop(1, 'rgba(35, 87, 195, 0)');
 
     const labels = Array.from({ length: 30 }, (_, index) => `Apr ${index + 1}`);
 
@@ -135,9 +135,9 @@ function App() {
           data: [1800, 3200, 2400, 4100, 3800, 5200, 6900, 6200, 7800, 8600, 1800, 9400, 10400, 11300, 11400, 12800, 10800, 12900, 14300, 15100, 14400, 16200, 17000, 17800, 16800, 19000, 19700, 20600, 21400, 22300],
           borderColor: conversionLine,
           backgroundColor: conversionArea,
-          pointBackgroundColor: '#58DDE8',
-          pointHoverBackgroundColor: '#58DDE8',
-          pointBorderColor: '#58DDE8',
+          pointBackgroundColor: '#BDCCEB',
+          pointHoverBackgroundColor: '#BDCCEB',
+          pointBorderColor: '#BDCCEB',
           borderWidth: 3,
           pointRadius: 0,
           pointHoverRadius: 6,
@@ -149,9 +149,9 @@ function App() {
           data: [1400, 2300, 1900, 3000, 2300, 3600, 4600, 4200, 5100, 5600, 2300, 6200, 6800, 7400, 7200, 8200, 6900, 8000, 9100, 9700, 9500, 10500, 11000, 11600, 10300, 12100, 12400, 12900, 13500, 14100],
           borderColor: roiLine,
           backgroundColor: roiArea,
-          pointBackgroundColor: '#00A3B4',
-          pointHoverBackgroundColor: '#00A3B4',
-          pointBorderColor: '#00A3B4',
+          pointBackgroundColor: '#3F73DD',
+          pointHoverBackgroundColor: '#3F73DD',
+          pointBorderColor: '#3F73DD',
           borderWidth: 3,
           pointRadius: 0,
           pointHoverRadius: 6,
@@ -163,9 +163,9 @@ function App() {
           data: [900, 1300, 1100, 1700, 1400, 1900, 2200, 2100, 2500, 2700, 2500, 2900, 3300, 3600, 3200, 3800, 4000, 3500, 4200, 4300, 3900, 4600, 4900, 5100, 4800, 5300, 5500, 5700, 5900, 6100],
           borderColor: cacLine,
           backgroundColor: cacArea,
-          pointBackgroundColor: '#00727E',
-          pointHoverBackgroundColor: '#00727E',
-          pointBorderColor: '#00727E',
+          pointBackgroundColor: '#2357C3',
+          pointHoverBackgroundColor: '#2357C3',
+          pointBorderColor: '#2357C3',
           borderWidth: 3,
           pointRadius: 0,
           pointHoverRadius: 6,
@@ -189,7 +189,7 @@ function App() {
         titleFont: { size: 16, weight: 600 },
         padding: 18,
         cornerRadius: 14,
-        borderColor: 'rgba(0, 163, 180, 0.28)',
+        borderColor: 'rgba(63, 115, 221, 0.28)',
         borderWidth: 1,
         displayColors: true,
         boxWidth: 10,
@@ -205,7 +205,7 @@ function App() {
       y: {
         beginAtZero: true,
         max: 25000,
-        grid: { color: 'rgba(0, 163, 180, 0.16)', drawBorder: false, borderDash: [4, 4] },
+        grid: { color: 'rgba(63, 115, 221, 0.16)', drawBorder: false, borderDash: [4, 4] },
         border: { color: 'rgba(255, 255, 255, 0.1)' },
         ticks: {
           color: '#A0A8BA',
